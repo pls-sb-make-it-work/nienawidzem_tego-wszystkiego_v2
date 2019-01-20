@@ -11,6 +11,11 @@ game::game()
 	s.setTexture(t1);
 	background.setTexture(t2);
 	frame.setTexture(t3);
+
+	a[0].x = 0, a[0].y = 1;
+	a[1].x = 1, a[1].y = 1;
+	a[2].x = 1, a[2].y = 2;
+	a[3].x = 1, a[3].y = 3;
 }
 
 game::~game()
@@ -86,7 +91,7 @@ void game::Tick()
 		if (!Check())
 		{
 			for (int i = 0; i < 4; i++) 
-			//	field[b[i].y][b[i].x] = colorNum;
+				field[b[i].y][b[i].x] = colorNum;
 				//zakomentowanie tego nie psuje gry xD
 
 			colorNum = 1 + rand() % 7;

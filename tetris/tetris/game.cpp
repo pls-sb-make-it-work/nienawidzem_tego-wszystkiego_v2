@@ -7,6 +7,10 @@ game::game()
 	t1.loadFromFile("obrazy/klocek.png");
 	t2.loadFromFile("obrazy/tlo.png");
 	t3.loadFromFile("obrazy/ramka.png");
+
+	s.setTexture(t1);
+	background.setTexture(t2);
+	frame.setTexture(t3);
 }
 
 game::~game()
@@ -15,7 +19,7 @@ game::~game()
 
 void game::Run()
 {
-	RenderWindow window(VideoMode(320, 480), "The Game!");
+	window.create(VideoMode(320, 480, 32), "The Game!", Style::Close);
 
 }
 
@@ -41,6 +45,13 @@ void game::Update()
 		}
 
 		if (Keyboard::isKeyPressed(Keyboard::Down)) delay = 0.05;
+
+		Move();
+		Rotate();
+		Tick();
+		Lines();
+		Draw();
+
 	}
 }
 
@@ -74,7 +85,9 @@ void game::Tick()
 
 		if (!Check())
 		{
-			for (int i = 0; i < 4; i++) field[b[i].y][b[i].x] = colorNum;
+			for (int i = 0; i < 4; i++) 
+			//	field[b[i].y][b[i].x] = colorNum;
+				//zakomentowanie tego nie psuje gry xD
 
 			colorNum = 1 + rand() % 7;
 			int n = rand() % 7;
@@ -108,7 +121,7 @@ void game::Lines()
 
 void game::Draw()
 {
-	Sprite s(t1), background(t2), frame(t3);
+	//Sprite s(t1), background(t2), frame(t3);
 
 	window.clear(Color::White);
 	window.draw(background);

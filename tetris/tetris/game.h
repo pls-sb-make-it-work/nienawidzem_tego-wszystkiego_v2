@@ -5,7 +5,9 @@
 using namespace sf;
 
 class game
-{private:
+{
+private:
+
 	struct point
 	{
 		int x, y;
@@ -18,8 +20,8 @@ class game
 	bool rotate = 0;
 	int colorNum = 1;
 
-	int M = 20;
-	int N = 10;
+	const int M = 20;
+	const int N = 10;
 
 
 	int field[20][10] = { 0 };
@@ -41,6 +43,8 @@ class game
 	Clock clock;
 
 	Event e;
+
+	Sprite s, background, frame;
 
 public:
 	game();

@@ -9,11 +9,10 @@ int main()
 
 	dupa.Run();
 	dupa.Update();
-	dupa.Draw();
-	dupa.Check();
-	dupa.Move();
-	dupa.Rotate();
-	dupa.Tick();
 
-	return 0;
+	//dupa.Check();
+	//dupa.Move();
+	//dupa.Rotate();
+	//dupa.Tick();
+
 }

@@ -1,0 +1,11 @@
+﻿  game.cpp
+c:\users\psikot\source\repos\tetris\tetris\game.h(42): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+c:\users\psikot\source\repos\tetris\tetris\game.cpp(6): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+c:\users\psikot\source\repos\tetris\tetris\game.cpp(44): warning C4305: "=": obcięcie z "double" do "float"
+c:\users\psikot\source\repos\tetris\tetris\game.cpp(107): warning C4305: "=": obcięcie z "double" do "float"
+c:\users\psikot\source\repos\tetris\tetris\game.cpp(122): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+c:\users\psikot\source\repos\tetris\tetris\game.cpp(130): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+  main.cpp
+c:\users\psikot\source\repos\tetris\tetris\game.h(42): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+  Generowanie kodu...
+  tetris.vcxproj -> C:\Users\PSIKOT\source\repos\tetris\Debug\tetris.exe

@@ -5,14 +5,7 @@
 int main()
 
 {
-	game dupa;
+	Game tetris;
 
-	dupa.Run();
-	dupa.Update();
-
-	//dupa.Check();
-	//dupa.Move();
-	//dupa.Rotate();
-	//dupa.Tick();
-
+	tetris.Update();
 }

@@ -1,30 +1,28 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <time.h>
-
+#include "point.h"
 using namespace sf;
 
-class game
+class Game
 {
 private:
 
-	struct point
-	{
-		int x, y;
-	} a[4], b[4];
-
+	Point a[4], b[4];
 	RenderWindow window;
 	Texture t1, t2, t3;
+	Clock clock;
+	Event e;
+	Sprite s, background, frame;
 
-	int dx = 0;
-	bool rotate = 0;
 	int colorNum = 1;
+	float timer = 0;
+	float delay = 0.3;
 
-	const int M = 20;
-	const int N = 10;
+	const int M = 20; // height
+	const int N = 10; // width
 
-
-	int field[20][10] = { 0 };
+	int **field; // 2d array in constructor
 
 	int figures[7][4] =
 	{
@@ -37,26 +35,18 @@ private:
 		2,3,4,5, // O
 	};
 
-	float timer = 0;
-	float delay = 0.3;
-
-	Clock clock;
-
-	Event e;
-
-	Sprite s, background, frame;
-
 public:
-	game();
-	~game();
-	void Run();
+	Game();
+	~Game();
+
 	void Update();
-	void Move();
+	void Move(int direction);
 	void Rotate();
 	void Tick();
 	void Lines();
 	void Draw();
 	bool Check();
+	bool End();
 };
 
 
